@@ -11,7 +11,7 @@
   "Execute a block of D code BODY according to PARAMS.
 This function is called by `org-babel-execute-src-block'."
   (let* ((full-body (org-babel-expand-body:d body params))
-	 (tmp-file (org-babel-temp-file "d-"))
+	 (tmp-file (org-babel-temp-file "d"))
 	 (result (progn
 		   (with-temp-file tmp-file
 		     (insert full-body))
